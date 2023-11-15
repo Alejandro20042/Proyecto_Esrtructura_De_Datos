@@ -1,17 +1,14 @@
 namespace Proyecto_Esrtructura_De_Datos
 {
-    public partial class Form1 : Form
+    public partial class wdwArrays : Form
     {
-        public Form1()
+        public wdwArrays()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
-            this.Hide(); //Indicamos que abriremos otra ventana
-            form2.Show();
 
         }
 
@@ -28,6 +25,18 @@ namespace Proyecto_Esrtructura_De_Datos
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnVolverMenu_Click(object sender, EventArgs e)
+        {
+            MenuPrincipal menu = new MenuPrincipal();
+            this.Hide();
+            menu.Show();
         }
     }
 }

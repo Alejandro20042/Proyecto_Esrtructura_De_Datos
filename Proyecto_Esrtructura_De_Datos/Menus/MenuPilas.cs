@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proyecto_Esrtructura_De_Datos
+namespace Proyecto_Esrtructura_De_Datos.Menus
 {
-    public partial class MenuPrincipal : Form
+    public partial class MenuPilas : Form
     {
-        public MenuPrincipal()
+        public MenuPilas()
         {
             InitializeComponent();
         }
