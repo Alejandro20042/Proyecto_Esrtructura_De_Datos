@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_Esrtructura_De_Datos
 {
-    partial class Form2
+    partial class MenuPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -28,38 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            btnRegresar = new Button();
             panelLogo = new Panel();
+            Titulo = new Label();
+            panelLogo.SuspendLayout();
             SuspendLayout();
-            // 
-            // btnRegresar
-            // 
-            resources.ApplyResources(btnRegresar, "btnRegresar");
-            btnRegresar.Name = "btnRegresar";
-            btnRegresar.UseVisualStyleBackColor = true;
-            btnRegresar.Click += button1_Click;
             // 
             // panelLogo
             // 
             panelLogo.BackgroundImage = Properties.Resources.foot;
-            resources.ApplyResources(panelLogo, "panelLogo");
+            panelLogo.Controls.Add(Titulo);
+            panelLogo.Location = new Point(140, 12);
             panelLogo.Name = "panelLogo";
+            panelLogo.Size = new Size(512, 456);
+            panelLogo.TabIndex = 6;
             // 
-            // Form2
+            // Titulo
             // 
-            resources.ApplyResources(this, "$this");
+            Titulo.AutoSize = true;
+            Titulo.BackColor = Color.Transparent;
+            Titulo.Font = new Font("Segoe UI Black", 30F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            Titulo.ForeColor = SystemColors.ControlLightLight;
+            Titulo.Location = new Point(188, -3);
+            Titulo.Name = "Titulo";
+            Titulo.Size = new Size(138, 54);
+            Titulo.TabIndex = 0;
+            Titulo.Text = "label1";
+            // 
+            // MenuPrincipal
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(52, 73, 94);
+            ClientSize = new Size(800, 450);
             Controls.Add(panelLogo);
-            Controls.Add(btnRegresar);
-            Name = "Form2";
+            Name = "MenuPrincipal";
+            Text = "Estructura de Datos";
+            panelLogo.ResumeLayout(false);
+            panelLogo.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button btnRegresar;
         private Panel panelLogo;
+        private Label Titulo;
     }
 }

@@ -33,11 +33,14 @@
             btnModificar = new Button();
             btnEliminar = new Button();
             Ventana = new ListBox();
+            panelLogo = new Panel();
             SuspendLayout();
             // 
             // btnAgregar
             // 
             btnAgregar.BackColor = Color.FromArgb(46, 204, 113);
+            btnAgregar.Font = new Font("Segoe UI Black", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            btnAgregar.ForeColor = SystemColors.ControlLightLight;
             btnAgregar.Location = new Point(12, 59);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(163, 63);
@@ -60,6 +63,8 @@
             // btnModificar
             // 
             btnModificar.BackColor = Color.FromArgb(52, 152, 219);
+            btnModificar.Font = new Font("Segoe UI Black", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            btnModificar.ForeColor = SystemColors.ControlLightLight;
             btnModificar.Location = new Point(12, 158);
             btnModificar.Name = "btnModificar";
             btnModificar.Size = new Size(163, 63);
@@ -70,6 +75,8 @@
             // btnEliminar
             // 
             btnEliminar.BackColor = Color.FromArgb(217, 83, 79);
+            btnEliminar.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            btnEliminar.ForeColor = SystemColors.ControlLightLight;
             btnEliminar.Location = new Point(12, 261);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(163, 63);
@@ -88,17 +95,26 @@
             Ventana.TabIndex = 4;
             Ventana.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
+            // panelLogo
+            // 
+            panelLogo.BackgroundImage = Properties.Resources.foot;
+            panelLogo.Location = new Point(171, 12);
+            panelLogo.Name = "panelLogo";
+            panelLogo.Size = new Size(515, 456);
+            panelLogo.TabIndex = 5;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(52, 73, 94);
             ClientSize = new Size(800, 450);
+            Controls.Add(btnSiguiente);
             Controls.Add(Ventana);
             Controls.Add(btnEliminar);
             Controls.Add(btnModificar);
-            Controls.Add(btnSiguiente);
             Controls.Add(btnAgregar);
+            Controls.Add(panelLogo);
             Name = "Form1";
             Text = "Estructura de Datos";
             ResumeLayout(false);
@@ -111,5 +127,6 @@
         private Button btnModificar;
         private Button btnEliminar;
         private ListBox Ventana;
+        private Panel panelLogo;
     }
 }

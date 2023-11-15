@@ -59,5 +59,15 @@ namespace Proyecto_Esrtructura_De_Datos.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap foot {
+            get {
+                object obj = ResourceManager.GetObject("foot", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
