@@ -9,8 +9,8 @@ namespace Proyecto_Esrtructura_De_Datos.Listas
 {
     public class ClassListas
     {
-        NodoListas Primero = new NodoListas();
-        NodoListas Ultimo = new NodoListas();
+        Nodo Primero = new Nodo();
+        Nodo Ultimo = new Nodo();
 
         public ClassListas()
         {
@@ -25,7 +25,7 @@ namespace Proyecto_Esrtructura_De_Datos.Listas
         {
             if (EstaVacia())
             {
-                NodoListas Nuevo = new NodoListas();
+                Nodo Nuevo = new Nodo();
                 Nuevo.Valor = valorInsertado;
                 Nuevo.Siguiente = null;
                 Primero= Nuevo;
@@ -34,7 +34,7 @@ namespace Proyecto_Esrtructura_De_Datos.Listas
             }
             else
             {
-                NodoListas Nuevo = new NodoListas();
+                Nodo Nuevo = new Nodo();
                 Nuevo.Valor = valorInsertado;
                 Ultimo.Siguiente = Nuevo;
                 Ultimo = Nuevo;
@@ -45,7 +45,7 @@ namespace Proyecto_Esrtructura_De_Datos.Listas
         {
             if (EstaVacia())
             {
-                NodoListas Nuevo = new NodoListas();
+                Nodo Nuevo = new Nodo();
                 Nuevo.Valor = valorInsertado;
                 Nuevo.Siguiente = null;
                 Primero = Nuevo;
@@ -54,7 +54,7 @@ namespace Proyecto_Esrtructura_De_Datos.Listas
             }
             else if (LongitudLista() < dondeInsertar)
             {
-                NodoListas Nuevo = new NodoListas();
+                Nodo Nuevo = new Nodo();
                 Nuevo.Valor = valorInsertado;
                 Ultimo.Siguiente = Nuevo;
                 Ultimo = Nuevo;
@@ -62,7 +62,7 @@ namespace Proyecto_Esrtructura_De_Datos.Listas
             }
             else if (dondeInsertar < 0)
             {
-                NodoListas Nuevo = new NodoListas();
+                Nodo Nuevo = new Nodo();
                 Nuevo.Valor = valorInsertado;
                 Nuevo.Siguiente = Primero;
                 Primero = Nuevo;
@@ -70,9 +70,9 @@ namespace Proyecto_Esrtructura_De_Datos.Listas
             }
             else
             {
-                NodoListas Nuevo = new NodoListas();
+                Nodo Nuevo = new Nodo();
                 Nuevo.Valor = valorInsertado;
-                NodoListas Actual = Primero;
+                Nodo Actual = Primero;
                 for (int i = 1; i < dondeInsertar; i++)
                 {
                     Actual = Actual.Siguiente;
@@ -92,7 +92,7 @@ namespace Proyecto_Esrtructura_De_Datos.Listas
             else
             {
                 int contador = 0;
-                NodoListas Actual = Primero;
+                Nodo Actual = Primero;
                 while(Actual.Siguiente != null)
                 {
                     contador++;
@@ -110,8 +110,8 @@ namespace Proyecto_Esrtructura_De_Datos.Listas
             }
             else
             {
-                NodoListas Auxiliar = new NodoListas();
-                NodoListas Actual = Primero;
+                Nodo Auxiliar = new Nodo();
+                Nodo Actual = Primero;
                 while(Actual.Valor != valor)
                 {
                     Auxiliar = Actual;

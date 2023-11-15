@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Esrtructura_De_Datos.Pilas
 {
-    public class ClassPilas
+    public class ClassPilasEstaticas
     {
     }
 }

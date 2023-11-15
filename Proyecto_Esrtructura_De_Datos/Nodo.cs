@@ -1,18 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Markup;
 
-namespace Proyecto_Esrtructura_De_Datos.Listas
+namespace Proyecto_Esrtructura_De_Datos
 {
-    public class NodoListas
+    public class Nodo
     {
         private string _valor;
-        private NodoListas _siguiente;
+        private Nodo _siguiente;
 
-        public NodoListas()
+        public Nodo()
         {
             _siguiente = null;
         }
@@ -21,7 +16,7 @@ namespace Proyecto_Esrtructura_De_Datos.Listas
             get { return _valor; }
             set { _valor = value; }
         }
-        public NodoListas Siguiente
+        public Nodo Siguiente
         {
             get { return _siguiente; }
             set { _siguiente = value; }
