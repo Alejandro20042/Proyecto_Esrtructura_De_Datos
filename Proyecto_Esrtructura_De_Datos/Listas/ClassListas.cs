@@ -21,12 +21,15 @@ namespace Proyecto_Esrtructura_De_Datos.Listas
         {
             return Primero == null ? true : false;
         }
-        public bool InsertarEnFinalDeLista(string valorInsertado)
+        public bool InsertarEnLista(string valorInsertado)
         {
             if (EstaVacia())
             {
-                Primero.Valor = valorInsertado;
-                Ultimo = Primero;
+                NodoListas Nuevo = new NodoListas();
+                Nuevo.Valor = valorInsertado;
+                Nuevo.Siguiente = null;
+                Primero= Nuevo;
+                Ultimo = Nuevo;
                 return true;
             }
             else
@@ -38,7 +41,48 @@ namespace Proyecto_Esrtructura_De_Datos.Listas
                 return true;
             }
         }
-        
+        public bool InsertarEnLista(string valorInsertado, int dondeInsertar)
+        {
+            if (EstaVacia())
+            {
+                NodoListas Nuevo = new NodoListas();
+                Nuevo.Valor = valorInsertado;
+                Nuevo.Siguiente = null;
+                Primero = Nuevo;
+                Ultimo = Nuevo;
+                return true;
+            }
+            else if (LongitudLista() < dondeInsertar)
+            {
+                NodoListas Nuevo = new NodoListas();
+                Nuevo.Valor = valorInsertado;
+                Ultimo.Siguiente = Nuevo;
+                Ultimo = Nuevo;
+                return true;
+            }
+            else if (dondeInsertar < 0)
+            {
+                NodoListas Nuevo = new NodoListas();
+                Nuevo.Valor = valorInsertado;
+                Nuevo.Siguiente = Primero;
+                Primero = Nuevo;
+                return true;
+            }
+            else
+            {
+                NodoListas Nuevo = new NodoListas();
+                Nuevo.Valor = valorInsertado;
+                NodoListas Actual = Primero;
+                for (int i = 1; i < dondeInsertar; i++)
+                {
+                    Actual = Actual.Siguiente;
+                }
+                Nuevo.Siguiente = Actual.Siguiente;
+                Actual.Siguiente = Nuevo;
+                return true;
+            }
+        }
+
         public int LongitudLista()
         {
             if(EstaVacia())
@@ -66,7 +110,7 @@ namespace Proyecto_Esrtructura_De_Datos.Listas
             }
             else
             {
-                NodoListas Auxiliar;
+                NodoListas Auxiliar = new NodoListas();
                 NodoListas Actual = Primero;
                 while(Actual.Valor != valor)
                 {
@@ -80,7 +124,26 @@ namespace Proyecto_Esrtructura_De_Datos.Listas
                         Actual = Actual.Siguiente;
                     }
                 }
-
+                if(Actual.Siguiente == null)
+                {
+                    Auxiliar.Siguiente = null;
+                    Ultimo = Auxiliar;
+                }
+                else if(Primero == Ultimo)
+                {
+                    Primero = Ultimo = null;
+                }
+                else if (Primero.Valor == valor)
+                {
+                    Actual = Actual.Siguiente;
+                    Primero.Siguiente = null;
+                    Primero = Actual;
+                }
+                else
+                {
+                    Auxiliar.Siguiente = Actual.Siguiente;
+                    Actual.Siguiente = null;
+                }
                 return true;
 
             }
