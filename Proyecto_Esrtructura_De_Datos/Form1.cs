@@ -10,8 +10,8 @@ namespace Proyecto_Esrtructura_De_Datos
         private void button1_Click(object sender, EventArgs e)
         {
             Form2 form2 = new Form2();
+            this.Hide(); //Indicamos que abriremos otra ventana
             form2.Show();
-            this.Close();
 
         }
 

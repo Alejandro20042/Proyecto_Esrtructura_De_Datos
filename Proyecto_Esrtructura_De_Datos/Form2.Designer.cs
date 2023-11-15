@@ -28,32 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            btnRegresar = new Button();
             SuspendLayout();
             // 
-            // button1
+            // btnRegresar
             // 
-            button1.Location = new Point(12, 12);
-            button1.Name = "button1";
-            button1.Size = new Size(143, 40);
-            button1.TabIndex = 0;
-            button1.Text = "regresar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnRegresar.Location = new Point(12, 12);
+            btnRegresar.Name = "btnRegresar";
+            btnRegresar.Size = new Size(143, 40);
+            btnRegresar.TabIndex = 0;
+            btnRegresar.Text = "regresar";
+            btnRegresar.UseVisualStyleBackColor = true;
+            btnRegresar.Click += button1_Click;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
+            Controls.Add(btnRegresar);
             Name = "Form2";
-            Text = "Form2";
+            Text = "Estructura de Datos";
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button button1;
+        private Button btnRegresar;
     }
 }

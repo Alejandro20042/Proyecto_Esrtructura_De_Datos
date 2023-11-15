@@ -28,55 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            btnAgregar = new Button();
+            btnSiguiente = new Button();
+            btnModificar = new Button();
+            btnEliminar = new Button();
             Ventana = new ListBox();
             SuspendLayout();
             // 
-            // button1
+            // btnAgregar
             // 
-            button1.BackColor = Color.FromArgb(46, 204, 113);
-            button1.Location = new Point(12, 59);
-            button1.Name = "button1";
-            button1.Size = new Size(163, 63);
-            button1.TabIndex = 0;
-            button1.Text = "Agregar";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            btnAgregar.BackColor = Color.FromArgb(46, 204, 113);
+            btnAgregar.Location = new Point(12, 59);
+            btnAgregar.Name = "btnAgregar";
+            btnAgregar.Size = new Size(163, 63);
+            btnAgregar.TabIndex = 0;
+            btnAgregar.Text = "Agregar";
+            btnAgregar.UseVisualStyleBackColor = false;
+            btnAgregar.Click += button1_Click;
             // 
-            // button2
+            // btnSiguiente
             // 
-            button2.BackColor = Color.Gold;
-            button2.Location = new Point(505, 316);
-            button2.Name = "button2";
-            button2.Size = new Size(154, 52);
-            button2.TabIndex = 1;
-            button2.Text = "Siguiente";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            btnSiguiente.BackColor = Color.Gold;
+            btnSiguiente.Location = new Point(505, 316);
+            btnSiguiente.Name = "btnSiguiente";
+            btnSiguiente.Size = new Size(154, 52);
+            btnSiguiente.TabIndex = 1;
+            btnSiguiente.Text = "Siguiente";
+            btnSiguiente.UseVisualStyleBackColor = false;
+            btnSiguiente.Click += button2_Click;
             // 
-            // button3
+            // btnModificar
             // 
-            button3.BackColor = Color.FromArgb(52, 152, 219);
-            button3.Location = new Point(12, 158);
-            button3.Name = "button3";
-            button3.Size = new Size(163, 63);
-            button3.TabIndex = 2;
-            button3.Text = "Modificar";
-            button3.UseVisualStyleBackColor = false;
+            btnModificar.BackColor = Color.FromArgb(52, 152, 219);
+            btnModificar.Location = new Point(12, 158);
+            btnModificar.Name = "btnModificar";
+            btnModificar.Size = new Size(163, 63);
+            btnModificar.TabIndex = 2;
+            btnModificar.Text = "Modificar";
+            btnModificar.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnEliminar
             // 
-            button4.BackColor = Color.FromArgb(217, 83, 79);
-            button4.Location = new Point(12, 261);
-            button4.Name = "button4";
-            button4.Size = new Size(163, 63);
-            button4.TabIndex = 3;
-            button4.Text = "Eliminar";
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
+            btnEliminar.BackColor = Color.FromArgb(217, 83, 79);
+            btnEliminar.Location = new Point(12, 261);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(163, 63);
+            btnEliminar.TabIndex = 3;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseVisualStyleBackColor = false;
+            btnEliminar.Click += button4_Click;
             // 
             // Ventana
             // 
@@ -95,21 +95,21 @@
             BackColor = Color.FromArgb(52, 73, 94);
             ClientSize = new Size(800, 450);
             Controls.Add(Ventana);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnEliminar);
+            Controls.Add(btnModificar);
+            Controls.Add(btnSiguiente);
+            Controls.Add(btnAgregar);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Estructura de Datos";
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button btnAgregar;
+        private Button btnSiguiente;
+        private Button btnModificar;
+        private Button btnEliminar;
         private ListBox Ventana;
     }
 }
